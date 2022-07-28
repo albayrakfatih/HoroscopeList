@@ -1,0 +1,42 @@
+import 'dart:ui';
+
+import 'package:burc_rehberi/burc_listesi.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("images/burc.png"), fit: BoxFit.cover),
+        ),
+        child: ListView(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  child: Text(
+                    "  Burçlar & Özellikleri ",
+                    style: TextStyle(
+                        fontSize: 46,
+                        fontFamily: "Arial",
+                        decoration: TextDecoration.none,
+                        color: Colors.black),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
+            ),
+            
+          ],
+        ),
+      ),
+    );
+  }
+}
